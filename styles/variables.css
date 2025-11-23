@@ -22,13 +22,8 @@
   /* Размеры шрифтов для заголовков */
   --h1-wdh: 65px;
   --h2-wdh: 23px;
-  --font-size-bt: 14px;
   
   /* Цвета */
-  --bg-color: #FFFFFF;
-  --bg-image: var(--background-gradient);
-  --font-wg-text: 400;
-  --font-wg-title: 700;
   --font-decor: var(--font-accent);
   
   /* Цвета для кнопок */
@@ -37,8 +32,6 @@
   --accent: #000;
   
   /* Цвета для иконки сердца */
-  --contour-color: #000;
-  --animation-fill-color: #ff0000;
   --contour-click: #ff0000;
   --main-body: #ff0000;
   --core: #ff0000;
