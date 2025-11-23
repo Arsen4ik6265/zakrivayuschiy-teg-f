@@ -152,12 +152,16 @@ main {
   vertical-align: middle;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1px var(--Themes-background, #FFFFFF);
-  text-stroke: 1px var(--Themes-background, #FFFFFF);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
+}
+
+@supports (-webkit-text-stroke: 1px) {
+  .card__watermark {
+    -webkit-text-stroke: 1px var(--Themes-background, #FFFFFF);
+  }
 }
 
 article.card:nth-child(6) .card__watermark,
