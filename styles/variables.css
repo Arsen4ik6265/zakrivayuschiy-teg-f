@@ -1,1 +1,46 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* Шрифты */
+  --font-main: 'Inter', sans-serif;
+  --font-accent: 'PressStart2P', fantasy;
+  
+  /* Веса шрифта для вариативного Inter */
+  --font-weight-text: 400;
+  --font-weight-title: 700;
+  
+  /* Фон страницы - множественный градиент */
+  --background-gradient: 
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  
+  /* Ширина контентного блока */
+  --content-width: clamp(375px, 100%, 700px);
+  --block-wdh: var(--content-width);
+  
+  /* Размеры шрифтов для заголовков */
+  --h1-wdh: 65px;
+  --h2-wdh: 23px;
+  --font-size-bt: 14px;
+  
+  /* Цвета */
+  --bg-color: #FFFFFF;
+  --bg-image: var(--background-gradient);
+  --font-wg-text: 400;
+  --font-wg-title: 700;
+  --font-decor: var(--font-accent);
+  
+  /* Цвета для кнопок */
+  --button-text-color: #fff;
+  --accent-color: #000;
+  --accent: #000;
+  
+  /* Цвета для иконки сердца */
+  --contour-color: #000;
+  --animation-fill-color: #ff0000;
+  --contour-click: #ff0000;
+  --main-body: #ff0000;
+  --core: #ff0000;
+  --sparks: #ff0000;
+}
