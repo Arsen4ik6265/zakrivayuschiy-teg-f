@@ -734,12 +734,6 @@ svg.visually-hidden {
     padding-inline: 0;
   }
 
-  .card__image-wrapper {
-    order: 0;
-    margin: 0;
-    padding: 0;
-  }
-
   .card:not(:first-child) .card__image {
     inline-size: 100%;
     aspect-ratio: 1;
