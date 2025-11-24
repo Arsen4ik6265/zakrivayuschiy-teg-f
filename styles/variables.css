@@ -20,8 +20,8 @@
   --block-wdh: var(--content-width);
   
   /* Размеры шрифтов для заголовков */
-  --h1-wdh: 65px;
-  --h2-wdh: 23px;
+  --h1-wdh: clamp(49px, 0.04923 * 100vw + 30.54px, 65px);
+  --h2-wdh: clamp(14px, 0.02769 * 100vw + 3.62px, 23px);
   
   /* Цвета */
   --font-decor: var(--font-accent);

@@ -13,13 +13,25 @@ const likeButtonArray = document.querySelectorAll('.card__like-button');
 const iconButtonArray = document.querySelectorAll('.card__icon-button');
 
 iconButtonArray.forEach((iconButton, index) => {
-  iconButton.onclick = () =>
-    toggleIsLiked(likeHeartArray[index], likeButtonArray[index]);
+  iconButton.addEventListener('click', () =>
+    toggleIsLiked(likeHeartArray[index], likeButtonArray[index]));
 });
 
 likeButtonArray.forEach((button, index) => {
-  button.onclick = () => toggleIsLiked(likeHeartArray[index], button);
+  button.addEventListener('click', () => toggleIsLiked(likeHeartArray[index], button));
 });
+
+// Обработчики для диалога
+const dialog = document.querySelector('.dialog');
+const saveButton = document.querySelector('.card__save-button');
+
+if (saveButton) {
+  saveButton.addEventListener('click', () => {
+    if (dialog) {
+      dialog.showModal();
+    }
+  });
+}
 
 function toggleIsLiked(heart, button) {
   heart.classList.toggle('is-liked');
