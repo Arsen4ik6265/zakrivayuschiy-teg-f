@@ -117,7 +117,7 @@ main {
   right: 27px;
   inline-size: 98px;
   opacity: 0.5;
-  mix-blend-mode: hard-light;
+  mix-blend-mode: difference;
   background: transparent;
   font-family: var(--font-accent);
   font-weight: 400;
@@ -127,7 +127,7 @@ main {
   letter-spacing: 0px;
   vertical-align: middle;
   text-transform: uppercase;
-  color: transparent;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,7 +291,7 @@ article.card:nth-child(8) .card__watermark {
   display: flex;
   justify-content: center;
   margin-block-start: 50px;
-  margin-block-end: 0;
+  margin-block-end: 100px;
 }
 
 /* Общий класс для всех кнопок */
@@ -321,10 +321,6 @@ article.card:nth-child(8) .card__watermark {
   transform: translateX(0);
 }
 
-.button:hover .button__text {
-  color: #ffffff;
-}
-
 .card__like-button,
 .card__ok-button {
   gap: 10px;
@@ -352,11 +348,6 @@ article.card:nth-child(8) .card__watermark {
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.card__save-button:focus,
-.card__ok-button:focus {
-  box-shadow: none;
-}
-
 .button__text {
   position: relative;
   z-index: 1;
@@ -366,8 +357,8 @@ article.card:nth-child(8) .card__watermark {
   font-size: 14px;
   line-height: 90%;
   letter-spacing: 0;
-  color: #000000;
-  transition: color 0.5s ease-in-out;
+  color: #ffffff;
+  mix-blend-mode: difference;
 }
 
 .card__like-button.is-liked .button__text {
@@ -377,16 +368,20 @@ article.card:nth-child(8) .card__watermark {
   display: inline-block;
   margin: 0;
   padding: 0;
-  position: static;
+  position: relative;
   right: auto;
   left: auto;
   text-align: center;
+  z-index: 1;
+  mix-blend-mode: difference;
 }
 
 .card__like-button.is-liked .button__text::before {
   content: "Unlike";
   font-size: 14px;
   display: inline-block;
+  color: #ffffff;
+  mix-blend-mode: difference;
 }
 
 .card__save-button .button__text {
@@ -413,20 +408,18 @@ article.card:nth-child(8) .card__watermark {
   position: relative;
   z-index: 1;
   flex-shrink: 0;
-  color: var(--accent-color);
+  color: #ffffff;
+  mix-blend-mode: difference;
   fill: currentColor;
   display: block;
   inline-size: 21px;
   block-size: 21px;
-  transition: color 0.5s ease-in-out;
 }
 
 .card__save-icon use {
-  fill: currentColor;
-}
-
-.card__save-button:hover .card__save-icon {
   color: #ffffff;
+  mix-blend-mode: difference;
+  fill: currentColor;
 }
 
 /* Кнопка с сердцем */
@@ -627,6 +620,12 @@ svg.visually-hidden {
   .dialog__content {
     gap: 15px;
     padding: 15px;
+    inline-size: calc(100% - 30px);
+    max-inline-size: 353px;
+  }
+
+  .dialog__text {
+    max-inline-size: calc(100% - 54px);
   }
 
   .dialog__button {
@@ -648,6 +647,7 @@ svg.visually-hidden {
     justify-content: flex-start;
     margin-inline-start: 34.5px;
     margin-inline-end: 34.5px;
+    margin-block-end: 50px;
   }
 
   .card__save-button {
