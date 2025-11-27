@@ -24,7 +24,10 @@
 
 .content-section {
   inline-size: var(--content-width);
+  max-inline-size: 100%;
   margin: 0 auto;
+  padding-inline: 2px;
+  box-sizing: border-box;
 }
 
 main {
@@ -69,8 +72,9 @@ main {
   border: 2px solid #000;
   background: #ffffff;
   margin-block-start: 2px;
-  margin-inline-start: 2px;
-  margin-block-end: 50px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin-block-end: 51px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -87,7 +91,7 @@ main {
   font-weight: 700;
   font-variation-settings: "wght" 700;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 120%;
   color: #000;
 }
 
@@ -155,7 +159,7 @@ article.card:nth-child(8) .card__watermark {
 .card__image {
   display: block;
   inline-size: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
@@ -168,13 +172,12 @@ article.card:nth-child(8) .card__watermark {
   align-items: center;
   gap: 5px;
   margin-block-start: auto;
-  margin-block-end: 26px;
-  margin-inline-end: 27px;
+  margin-block-end: 25px;
+  margin-inline-end: 24px;
   align-self: flex-end;
 }
 
 .card__text {
-  inline-size: calc(100% - 4px);
   font-family: var(--font-main);
   font-weight: 410;
   font-variation-settings: "wght" 410;
@@ -184,7 +187,7 @@ article.card:nth-child(8) .card__watermark {
   letter-spacing: 0;
   color: #000;
   margin: 0;
-  padding: 12px 23px;
+  padding: 13px 23px;
   text-align: left;
   text-indent: 0;
   word-break: normal;
@@ -575,8 +578,7 @@ svg.visually-hidden {
 
   .card__content {
     inline-size: 100%;
-    gap: 0;
-    padding-inline: 0;
+    gap: 4px;
   }
 
   .card__image-wrapper {
@@ -595,7 +597,7 @@ svg.visually-hidden {
 
   .card__footer {
     margin-block-end: 26px;
-    margin-inline-end: 29px;
+    margin-inline-end: 23px;
     margin-block-start: 10px;
   }
 
@@ -615,6 +617,11 @@ svg.visually-hidden {
   .card:not(:first-child) .card__texts .card__text:not(:first-of-type) {
     margin-block-start: 16px;
     padding: 8px 25px 16px 23px;
+  }
+
+  .dialog__content {
+    padding: 30px 40px;
+    gap: 30px;
   }
 
   .dialog__text {
