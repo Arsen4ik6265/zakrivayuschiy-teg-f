@@ -117,7 +117,7 @@ main {
   right: 27px;
   inline-size: 98px;
   opacity: 0.5;
-  mix-blend-mode: difference;
+  mix-blend-mode: hard-light;
   background: transparent;
   font-family: var(--font-accent);
   font-weight: 400;
@@ -617,15 +617,8 @@ svg.visually-hidden {
     padding: 8px 25px 16px 23px;
   }
 
-  .dialog__content {
-    gap: 15px;
-    padding: 15px;
-    inline-size: calc(100% - 30px);
-    max-inline-size: 353px;
-  }
-
   .dialog__text {
-    max-inline-size: calc(100% - 54px);
+    max-inline-size: 239px;
   }
 
   .dialog__button {
@@ -647,7 +640,6 @@ svg.visually-hidden {
     justify-content: flex-start;
     margin-inline-start: 34.5px;
     margin-inline-end: 34.5px;
-    margin-block-end: 50px;
   }
 
   .card__save-button {
