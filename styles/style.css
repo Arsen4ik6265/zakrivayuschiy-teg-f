@@ -620,8 +620,9 @@ svg.visually-hidden {
   }
 
   .dialog__content {
-    padding: 30px 40px;
+    padding: 30px 36px;
     gap: 30px;
+    max-inline-size: 341px;
   }
 
   .dialog__text {
@@ -630,6 +631,14 @@ svg.visually-hidden {
 
   .dialog__button {
     inline-size: 261px;
+  }
+}
+
+@media (width < 400px) {
+  .dialog__content {
+    padding: 30px 36px;
+    gap: 30px;
+    max-inline-size: 341px;
   }
 
   .card__watermark {
